@@ -2,3 +2,7 @@
 venv
 .zip
 images-20241010T022241Z-001.zip
+
+__pycache__
+
+TESTANDO.log
