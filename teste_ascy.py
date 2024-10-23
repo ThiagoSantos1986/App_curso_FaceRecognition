@@ -44,7 +44,9 @@ class Faces_Recognition:
 
     def detect_faces(self, frame):
                     
-            self.face_location = face_recognition.face_locations(frame, number_of_times_to_upsample=1)           
+            self.face_location = face_recognition.face_locations(frame, number_of_times_to_upsample=1)
+            yield (self.face_location)           
+            
             self.face_encodings = face_recognition.face_encodings(frame, self.face_location)
                     
             self.faces_names = []
@@ -63,7 +65,7 @@ class Faces_Recognition:
                         
                 self.faces_names.append(name)        
              
-            return self.face_location , self.faces_names
+            return  self.face_locations, self.faces_names
 
     def gen_frames(self ):
             
