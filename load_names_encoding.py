@@ -15,7 +15,7 @@ def encoding_faces():
         
         known_faces_encodings.append(face_encoding)
         known_faces_names.append(face)
-    print("nomes Carregados")
+    
     return known_faces_names, known_faces_encodings
 
 if __name__ == "__main__":

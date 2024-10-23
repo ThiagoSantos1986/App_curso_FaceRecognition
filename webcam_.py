@@ -8,6 +8,7 @@ from logging import info, warning
 import cv2
 import numpy as np
 import imutils
+from load_names_encoding import encoding_faces
 
 
 basicConfig(level=DEBUG,
@@ -19,36 +20,36 @@ basicConfig(level=DEBUG,
 logger = logging.getLogger('Web cam quarto')
 
 
-trump_load = fr.load_image_file('images/samples/trump.jpg')
-trump_enconding = fr.face_encodings(trump_load)[0]
+# trump_load = fr.load_image_file('images/samples/trump.jpg')
+# trump_enconding = fr.face_encodings(trump_load)[0]
 
 
-modi_load = fr.load_image_file('images/samples/modi.jpg')
-modi_enconding = fr.face_encodings(modi_load)[0]
+# modi_load = fr.load_image_file('images/samples/modi.jpg')
+# modi_enconding = fr.face_encodings(modi_load)[0]
 
-knows_names = ['trump', 'modi']
-knows_faces_encoding = [trump_enconding, modi_enconding]
+# knows_names = ['trump', 'modi']
+# knows_faces_encoding = [trump_enconding, modi_enconding]
+
+print("carregando nomes e faces... ")
+knows_names , knows_faces_encoding = encoding_faces()
 
 all_faces_locations = []
-
 all_faces_encoding = []
-all_faces_names = []
+# all_faces_names = []
 process_this_frame = True
-# rtmp_url = "rtmp://192.168.0.25:1935/small/teste"
-# ip = 'rtsp://192.168.0.38:8080/h264.sdp'
-print("iniciando a captura de imagens... ")
-# cam = WebcamVideoStream().start()
-cam2  = VideoStream().start()
-time.sleep(1.0)
-
-
-fps = FPS().start()
 
 def filterFrame(frame):
 	frame = imutils.resize(frame, width=450)
 	frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 	frame = np.dstack([frame, frame, frame])
 	return frame
+
+# cam = WebcamVideoStream().start()
+cam2  = VideoStream().start()
+time.sleep(1.0)
+
+
+fps = FPS().start()
 
 while True:
     frame = cam2.read()
@@ -117,3 +118,12 @@ while True:
 fps.stop()
 cam2.stop()
 cv2.destroyAllWindows()
+
+
+if __name__ == "__main__":
+
+    print("iniciando a captura de imagens... ")
+   
+   
+    
+   
