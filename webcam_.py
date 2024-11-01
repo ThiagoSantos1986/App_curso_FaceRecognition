@@ -44,8 +44,8 @@ def filterFrame(frame):
 	frame = np.dstack([frame, frame, frame])
 	return frame
 
-# cam = WebcamVideoStream().start()
-cam2  = VideoStream().start()
+cam2 = WebcamVideoStream().start()
+# cam2  = VideoStream().start()
 time.sleep(1.0)
 
 
@@ -104,6 +104,7 @@ while True:
         cv2.putText(frame, name, (left_pos, bottom_pos), font, 0.5, (255,0,0),1)
 
     cv2.imshow("faces reconhecidas", frame)
+    
     if frame is False:
         cv2.destroyAllWindows()
         break

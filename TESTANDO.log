@@ -1,34 +1,121 @@
-INFO: root : 10/23/2024 05:21:26 PM: Rosto Localizado--> THIAGOCOSME.JPG
-INFO: root : 10/23/2024 05:21:30 PM: Rosto Localizado--> THIAGOCOSME.JPG
-INFO: root : 10/23/2024 05:21:32 PM: Rosto Localizado--> THIAGOCOSME.JPG
-INFO: root : 10/23/2024 05:21:34 PM: Rosto Localizado--> THIAGOCOSME.JPG
-INFO: root : 10/23/2024 05:21:36 PM: Rosto Localizado--> THIAGOCOSME.JPG
-INFO: root : 10/23/2024 05:21:38 PM: Rosto Localizado--> THIAGOCOSME.JPG
-INFO: root : 10/23/2024 05:21:40 PM: Rosto Localizado--> THIAGOCOSME.JPG
-INFO: root : 10/23/2024 05:21:42 PM: Rosto Localizado--> THIAGOCOSME.JPG
-INFO: root : 10/23/2024 05:21:43 PM: Rosto Localizado--> THIAGOCOSME.JPG
-INFO: root : 10/23/2024 05:21:44 PM: Rosto Localizado--> THIAGOCOSME.JPG
-INFO: root : 10/23/2024 05:21:46 PM: Rosto Localizado--> THIAGOCOSME.JPG
-INFO: root : 10/23/2024 05:21:48 PM: Rosto Localizado--> THIAGOCOSME.JPG
-INFO: root : 10/23/2024 05:21:50 PM: Rosto Localizado--> THIAGOCOSME.JPG
-INFO: root : 10/23/2024 05:21:53 PM: Rosto Localizado--> THIAGOCOSME.JPG
-INFO: root : 10/23/2024 05:21:54 PM: Rosto Localizado--> THIAGOCOSME.JPG
-INFO: root : 10/23/2024 05:21:57 PM: Rosto Localizado--> THIAGOCOSME.JPG
-INFO: root : 10/23/2024 05:21:59 PM: Rosto Localizado--> THIAGOCOSME.JPG
-INFO: root : 10/23/2024 05:22:01 PM: Rosto Localizado--> THIAGOCOSME.JPG
-WARNING: Web cam quarto : 10/23/2024 05:22:03 PM: Desconhecido no local
-INFO: root : 10/23/2024 05:22:05 PM: Rosto Localizado--> THIAGOCOSME.JPG
-INFO: root : 10/23/2024 05:22:07 PM: Rosto Localizado--> THIAGOCOSME.JPG
-INFO: root : 10/23/2024 05:22:11 PM: Rosto Localizado--> THIAGOCOSME.JPG
-INFO: root : 10/23/2024 05:22:13 PM: Rosto Localizado--> THIAGOCOSME.JPG
-INFO: root : 10/23/2024 05:22:16 PM: Rosto Localizado--> THIAGOCOSME.JPG
-INFO: root : 10/23/2024 05:22:17 PM: Rosto Localizado--> THIAGOCOSME.JPG
-INFO: root : 10/23/2024 05:22:19 PM: Rosto Localizado--> THIAGOCOSME.JPG
-INFO: root : 10/23/2024 05:22:21 PM: Rosto Localizado--> THIAGOCOSME.JPG
-INFO: root : 10/23/2024 05:22:23 PM: Rosto Localizado--> THIAGOCOSME.JPG
-INFO: root : 10/23/2024 05:22:28 PM: Rosto Localizado--> TRUMP.JPG
-INFO: root : 10/23/2024 05:22:32 PM: Rosto Localizado--> TRUMP.JPG
-INFO: root : 10/23/2024 05:22:34 PM: Rosto Localizado--> THIAGOCOSME.JPG
-INFO: root : 10/23/2024 05:22:38 PM: Rosto Localizado--> THIAGOCOSME.JPG
-INFO: root : 10/23/2024 05:22:40 PM: Rosto Localizado--> THIAGOCOSME.JPG
-INFO: root : 10/23/2024 05:22:43 PM: Rosto Localizado--> THIAGOCOSME.JPG
+DEBUG: asyncio : 11/01/2024 12:38:19: Using proactor: IocpProactor
+INFO: root : 11/01/2024 12:38:28: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:38:30: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:38:32: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:38:33: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:38:36: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:38:38: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:38:40: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:38:42: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:38:43: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:38:45: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:38:47: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:38:50: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:38:52: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:38:58: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:39:00: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:39:02: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:39:04: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:39:07: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:39:09: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:39:11: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:39:12: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:39:14: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:39:16: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:39:18: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:39:20: Rosto Localizado thiagocosme.jpg
+WARNING: root : 11/01/2024 12:39:22: Unknown in local..
+WARNING: root : 11/01/2024 12:39:24: Unknown in local..
+WARNING: root : 11/01/2024 12:39:26: Unknown in local..
+INFO: root : 11/01/2024 12:39:30: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:39:32: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:39:34: Rosto Localizado thiagocosme.jpg
+WARNING: root : 11/01/2024 12:39:36: Unknown in local..
+WARNING: root : 11/01/2024 12:39:38: Unknown in local..
+WARNING: root : 11/01/2024 12:39:40: Unknown in local..
+WARNING: root : 11/01/2024 12:39:42: Unknown in local..
+WARNING: root : 11/01/2024 12:39:44: Unknown in local..
+WARNING: root : 11/01/2024 12:39:47: Unknown in local..
+WARNING: root : 11/01/2024 12:39:49: Unknown in local..
+WARNING: root : 11/01/2024 12:39:51: Unknown in local..
+WARNING: root : 11/01/2024 12:39:54: Unknown in local..
+WARNING: root : 11/01/2024 12:39:56: Unknown in local..
+WARNING: root : 11/01/2024 12:39:58: Unknown in local..
+WARNING: root : 11/01/2024 12:40:00: Unknown in local..
+WARNING: root : 11/01/2024 12:40:02: Unknown in local..
+WARNING: root : 11/01/2024 12:40:04: Unknown in local..
+WARNING: root : 11/01/2024 12:40:06: Unknown in local..
+WARNING: root : 11/01/2024 12:40:08: Unknown in local..
+INFO: root : 11/01/2024 12:40:13: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:40:15: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:40:18: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:40:20: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:40:21: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:40:25: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:40:27: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:40:30: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:40:31: Rosto Localizado thiagocosme.jpg
+WARNING: root : 11/01/2024 12:40:34: Unknown in local..
+WARNING: root : 11/01/2024 12:40:35: Unknown in local..
+INFO: root : 11/01/2024 12:40:38: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:40:42: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:40:53: Rosto Localizado thiagocosme.jpg
+WARNING: root : 11/01/2024 12:40:56: Unknown in local..
+INFO: root : 11/01/2024 12:40:58: Rosto Localizado thiagocosme.jpg
+WARNING: root : 11/01/2024 12:41:20: Unknown in local..
+INFO: root : 11/01/2024 12:41:22: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:41:24: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:41:28: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:41:30: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:41:32: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:41:34: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:41:36: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:41:38: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:41:41: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:41:43: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:41:45: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:41:47: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:41:49: Rosto Localizado thiagocosme.jpg
+WARNING: root : 11/01/2024 12:41:52: Unknown in local..
+WARNING: root : 11/01/2024 12:41:57: Unknown in local..
+WARNING: root : 11/01/2024 12:41:59: Unknown in local..
+WARNING: root : 11/01/2024 12:42:01: Unknown in local..
+INFO: root : 11/01/2024 12:42:05: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:42:07: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:42:09: Rosto Localizado thiagocosme.jpg
+WARNING: root : 11/01/2024 12:42:14: Unknown in local..
+WARNING: root : 11/01/2024 12:42:16: Unknown in local..
+INFO: root : 11/01/2024 12:42:24: Rosto Localizado abhi_makeup.jpg
+WARNING: root : 11/01/2024 12:42:27: Unknown in local..
+WARNING: root : 11/01/2024 12:42:29: Unknown in local..
+WARNING: root : 11/01/2024 12:42:31: Unknown in local..
+WARNING: root : 11/01/2024 12:42:33: Unknown in local..
+WARNING: root : 11/01/2024 12:42:35: Unknown in local..
+WARNING: root : 11/01/2024 12:42:37: Unknown in local..
+WARNING: root : 11/01/2024 12:42:54: Unknown in local..
+WARNING: root : 11/01/2024 12:42:56: Unknown in local..
+INFO: root : 11/01/2024 12:42:58: Rosto Localizado thiagocosme.jpg
+WARNING: root : 11/01/2024 12:43:00: Unknown in local..
+INFO: root : 11/01/2024 12:43:17: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:43:59: Rosto Localizado thiagocosme.jpg
+WARNING: root : 11/01/2024 12:44:29: Unknown in local..
+WARNING: root : 11/01/2024 12:44:31: Unknown in local..
+INFO: root : 11/01/2024 12:44:33: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:44:36: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:44:38: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:44:40: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:44:42: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:44:44: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:44:46: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:44:48: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:44:50: Rosto Localizado thiagocosme.jpg
+WARNING: root : 11/01/2024 12:45:06: Unknown in local..
+INFO: root : 11/01/2024 12:45:08: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:45:10: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:45:12: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:45:14: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:45:16: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:45:18: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:45:30: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:45:32: Rosto Localizado thiagocosme.jpg
+INFO: root : 11/01/2024 12:45:34: Rosto Localizado thiagocosme.jpg

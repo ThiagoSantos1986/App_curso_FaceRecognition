@@ -31,6 +31,14 @@ from logging import DEBUG, basicConfig, info, warning
     
 #     return "ola boa noite"
 
+
+
+# def filterFrame(frame):
+# 	# frame = imutils.resize(frame, width=450)
+# 	frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+# 	frame = np.dstack([frame, frame, frame])
+# 	return frame
+
 def face_distances_percent(face_distances, face_match_media=0.6):
     range = (1.0 - face_match_media) 
     linear_value = (1.0 - face_distances) / (range * 2.0)
@@ -41,15 +49,8 @@ def face_distances_percent(face_distances, face_match_media=0.6):
         value = (linear_value + ((1.0 -linear_value) * math.pow((linear_value - 0.5) * 2, 0.2))) * 100
         return str(round(value, 2)) + '%'
 
-def filterFrame(frame):
-    
-    frame = imutils.resize(frame, width=500)
-    frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    # frame = cv2.flip(frame, 1) 
-    frame = np.dstack([frame, frame, frame])
-    
-    return frame
 
+    
 
 class Face_Recognition:
     face_location = []
@@ -64,7 +65,8 @@ class Face_Recognition:
         self.encoding_faces()
         self.src = src
     
-
+    
+    
     def encoding_faces(self):
         
         for face in os.listdir('images/samples'):
@@ -80,119 +82,12 @@ class Face_Recognition:
             self.known_face_encodings.append(face_encoding)
             self.known_face_names.append(face)
             
-        # print(self.known_face_names)        
-    
-    # def encoding_faces(self):
-        
-    #     # face_data_base = Encoding.query.order_by(Encoding.encoding.desc()).all()
-    
-    #     for face in face_data_base:
-            
-    #         query_pessoa = Pessoa.query.filter_by(id_pessoa=face.id_pessoa).first() #pega a pessoa
-    #         self.known_face_names.append(query_pessoa.nome)
-                
-    #         record = face.encoding
-    #         unpack_b5 = np.frombuffer(record, dtype=np.float64)
-    #         self.known_face_encodings.append(unpack_b5)
-        
-    #     print(self.known_face_names)           
-        
+        # print(self.known_face_names)         
       
-        
-    def run_recogntion(self):
-        
-        # camera = cv2.VideoCapture(self.src)
-        # camera = WebcamVideoStream().start()
-        camera = VideoStream().start()
-        
-        time.sleep(1.0)
-    
-        fps = FPS().start()
-        
-        # if not video_capture.isOpened():
-        #     sys.exit('Video source not found')
-        
-        
-        while True:
-            frame = camera.read()
-            
-            if self.process_current_frame:
-               
-                
-                # frame = np.dstack([frame, frame, frame])
-                # frame = filterFrame(frame)
-                
-                frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-                # frame = np.dstack([frame, frame, frame])
-                frame_small = cv2.resize(frame, (0,0), fx=0.25, fy=0.25)
-                
-                
-                self.face_location = face_recognition.face_locations(frame_small, number_of_times_to_upsample=1)           
-                self.face_encoding = face_recognition.face_encodings(frame_small, self.face_location)
-                
-                self.face_names = []
-                
-                for face_encoding in self.face_encoding:
-                    matches = face_recognition.compare_faces(self.known_face_encodings, face_encoding)
-                    name = "Unknown"
-                    confidence = "Unknown"
-                    
-                    face_distances = face_recognition.face_distance(self.known_face_encodings, face_encoding)
-                    best_match_index = np.argmin(face_distances)
-                    
-                    if matches[best_match_index]:
-                        name = self.known_face_names[best_match_index]
-                        # confidence = face_distances_percent(face_distances[best_match_index])
-                        
-                    self.face_names.append(f'{name}')
-                      
-            self.process_current_frame = not self.process_current_frame   
-        
-            for (top, right, bottom, left), name in zip(self.face_location, self.face_names):     
-                top *= 4
-                right *= 4
-                bottom *= 4
-                left *= 4
-            
-                # Draw a box around the face
-                cv2.rectangle(frame, (left, top), (right, bottom), (0, 0, 255), 2)
-                
-                # Draw a label with a name below the face
-                cv2.rectangle(frame, (left, bottom - 35), (right, bottom), (0, 0, 255), 1)
-                font = cv2.FONT_HERSHEY_DUPLEX
-                cv2.putText(frame, name, (left + 6, bottom - 6), font, 0.8, (255, 255, 255), 1)
-            
-            _ , jpeg = cv2.imencode('.jpg', frame)
-        
-            frame  = jpeg.tobytes()
-            
-            yield (b'--frame\r\n' b'Content-type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
-            fps.update()
-        #     cv2.imshow('Video ', frame)
-        
-        #     if cv2.waitKey(1) & 0xFF == ord('q'):
-        #         break
-            # fps.update()
-        # camera.stop()
-        # video_capture.release()
-        # cv2.destroyAllWindows()
-
-
     def detect_faces(self, frame):
         
-        # frame = imutils.resize(frame, width=500)
-        frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        frame = np.dstack([frame, frame, frame])
-
-        # frame_rgb = cv2.cvtColor(frame_small, cv2.COLOR_BGR2RGB)
-        # frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-                # frame = cv2.flip(frame, 1) 
-        
         frame_small = cv2.resize(frame, (0,0), fx=self.frame_resizing, fy=self.frame_resizing)
-                
-        # frame_small = cv2.resize(frame, (0,0), fx=0.25, fy=0.25)
-               
-                
+              
         self.face_location = face_recognition.face_locations(frame_small, number_of_times_to_upsample=1)           
         self.face_encodings = face_recognition.face_encodings(frame_small, self.face_location)
                 
@@ -212,135 +107,60 @@ class Face_Recognition:
                 info(f'Rosto Localizado {name}')
                         
             else:
-                warning("pessoa desconhecida no local..")
+                warning(f"{name} in local..")
                     
             self.faces_names.append(name)        
                 
                     
-
         # self.face_location = np.array(self.face_location)
         # self.face_location = self.face_location / self.frame_resizing
         return self.face_location , self.faces_names
         
-    
-    def gen_webcam(self, ip=0):
-        logger = logging.getLogger('Mike faces')
-        
-        process_current_frame = True
-        
-        # camera = WebcamVideoStream().start()
-        camera = VideoStream(src=ip).start()
-        
-        time.sleep(1.0)
-        
-        fps = FPS().start()
-    
-    
-        
-        while True:
-        
-            frame = camera.read()
             
-            if process_current_frame:
-            
-                # frame = filterFrame(frame)
-                 
-                frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-                # frame = cv2.flip(frame, 1) 
-                frame = np.dstack([frame, frame, frame])
-        
-                
-                frame_small = cv2.resize(frame, (0,0), fx=0.25, fy=0.25)
-                
-                self.face_locations = face_recognition.face_locations(frame_small, number_of_times_to_upsample=1, model='hog')
-
-                self.face_encodings = face_recognition.face_encodings(frame_small, self.face_locations)
-                
-                self.faces_names = []
-                for encoding in self.face_encodings:
-                    
-                    matches = face_recognition.compare_faces(self.known_face_encodings, encoding, tolerance=0.6)
-                        
-                    name = "Unknown"
-                    # print(name)
-                    if True in matches:
-                        first_match_index = matches.index(True)              
-                        name = self.known_face_names[first_match_index]  
-                        logger.info(f'Rosto Localizado {name}')
-                        
-                    else:
-                        logger.warning("pessoa desconhecida no local..")
-                    
-                    self.faces_names.append(name)
-
-            self.process_current_frame = not self.process_current_frame  
-            
-            for (top, right, bottom, left), name in zip(self.face_locations, self.faces_names):
-                top *= 4
-                right *= 4
-                bottom *= 4
-                left *= 4
-                
-                cv2.rectangle(frame, (left, top), (right, bottom), (0, 0, 255), 2)
-                font = cv2.FONT_HERSHEY_DUPLEX
-                cv2.putText(frame, name, (left, bottom ), font, 1.0, (255, 255, 255), 1)
-            
-            # if cv2.waitKey(0) & 0xFF == ord('q'):
-            #     break
-            cv2.imshow('Video ', frame)
-        
-            if cv2.waitKey(1) & 0xFF == ord('q'):
-                break
-            fps.update()
-        
-        # camera.release()
-        camera.stop()
-        cv2.destroyAllWindows()
-            # _ , jpeg = cv2.imencode('.jpg', frame)
-            # frame  = jpeg.tobytes()
-            
-            # yield (b'--frame\r\n' b'Content-type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
-            # fps.update()
-            
-    def gen_frames(self, ip=0):
+    def gen_frames(self ):
         
         process_current_frame = True
             
-        # camera = WebcamVideoStream().start()
-        camera = VideoStream(src=ip).start()
+        # camera = WebcamVideoStream(src=self.src).start()
+        camera = VideoStream(src=self.src).start()
             
-        time.sleep(1.0)
-            
+        time.sleep(1.0)    
         fps = FPS().start()
             
         while True:
             
             frame = camera.read()
+            
+            frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+            frame = np.dstack([frame, frame, frame])
+            # frame = self.filterFrame(frame)
+           
                 
             if process_current_frame:
+                
                 self.face_locations, self.faces_names = self.detect_faces(frame)
 
             self.process_current_frame = not self.process_current_frame  
+            
+            if self.face_locations:    
                 
-            for (top, right, bottom, left), name in zip(self.face_locations, self.faces_names):
-                top *= 4
-                right *= 4
-                bottom *= 4
-                left *= 4
-                    
-                cv2.rectangle(frame, (left, top), (right, bottom), (0, 0, 255), 2)
-                font = cv2.FONT_HERSHEY_DUPLEX
-                cv2.putText(frame, name, (left, bottom ), font, 1.0, (255, 255, 255), 1)
-                
-                # if cv2.waitKey(0) & 0xFF == ord('q'):
-                #     break
-                cv2.imshow('Video ', frame)
+                for (top, right, bottom, left), name in zip(self.face_locations, self.faces_names):
+                    top *= 4
+                    right *= 4
+                    bottom *= 4
+                    left *= 4
+                        
+                    cv2.rectangle(frame, (left, top), (right, bottom), (0, 0, 255), 2)
+                    font = cv2.FONT_HERSHEY_DUPLEX
+                    cv2.putText(frame, name, (left, bottom ), font, 1.0, (255, 255, 255), 1)
+                        
+            cv2.imshow('Video ', frame)
+            
+            fps.update()
             
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
-            fps.update()
-            
-            # camera.release()
+              
         camera.stop()
         cv2.destroyAllWindows()
         
@@ -357,7 +177,6 @@ if __name__ == "__main__":
 
     ip = 'rtsp://192.168.0.35:5555/h264.sdp'
     print("iniciando a captura de imagens... ")
-    fr = Face_Recognition()
+    fr = Face_Recognition(src=ip)
     fr.gen_frames()
-    # fr.gen_webcam(ip)
-    
+   
